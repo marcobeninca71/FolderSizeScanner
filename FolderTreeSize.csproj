@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Nullable>enable</Nullable>
+    <ApplicationIcon>Folder.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\disk.png" />
+    <None Remove="Resources\done.png" />
+    <None Remove="Resources\folder.png" />
+    <None Remove="Resources\refresh.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\disk.png" />
+    <Resource Include="Resources\done.png" />
+    <Resource Include="Resources\folder.png" />
+    <Resource Include="Resources\refresh.png" />
+  </ItemGroup>
+
+</Project>
