@@ -1,10 +1,13 @@
-﻿using System;
+﻿using Dws.Utilities;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Windows.Input;
 
 namespace FolderTreeSize
 {
@@ -53,7 +56,7 @@ namespace FolderTreeSize
         private bool isDisk = false;
         public bool IsDisk { get { return isDisk; } set { isDisk = value; RaisePropertyChanged("IsDisk"); } }
         private long size = 0;
-        public long Size 
+        public long Size
         {
             get
             {
@@ -114,9 +117,9 @@ namespace FolderTreeSize
             {
                 lock (syncObj)
                 {
-                    return new ObservableCollection<FolderData>(subDirectories.OrderByDescending(x=>x.Size));
-                }  
-            } 
+                    return new ObservableCollection<FolderData>(subDirectories.OrderByDescending(x => x.Size));
+                }
+            }
         }
         public void AddSubdir(FolderData data)
         {
@@ -126,6 +129,22 @@ namespace FolderTreeSize
                 subDirectories.Add(data);
                 RaisePropertyChanged("SubDirectories");
             }
+        }
+
+        private DelegateCommand openInExplorerCommand = null;
+        public ICommand OpenInExplorerCommand
+        {
+            get
+            {
+                if (openInExplorerCommand == null)
+                    openInExplorerCommand = new DelegateCommand(new Action<object>(OpenInExplorer));
+                return openInExplorerCommand;
+            }
+        }
+
+        private void OpenInExplorer(object obj)
+        {
+            System.Diagnostics.Process.Start(Environment.GetEnvironmentVariable("WINDIR") + @"\explorer.exe", this.FolderPath); 
         }
     }
 }

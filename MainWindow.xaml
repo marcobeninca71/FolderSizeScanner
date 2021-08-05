@@ -40,6 +40,11 @@
                         <TextBlock Text="{Binding Path=FolderPath}" Margin="2,0,2,0" />
                         <TextBlock Text="{Binding Path=SizeString}" Margin="2,0,2,0" />
                         <Image Source="{Binding Path=IsPopulating, Converter={StaticResource booleanRunningImageConverter}}"/>
+                        <StackPanel.ContextMenu>
+                            <ContextMenu>
+                                <MenuItem Header="Open in explorer" Command="{Binding OpenInExplorerCommand}"></MenuItem>
+                            </ContextMenu>
+                        </StackPanel.ContextMenu>
                     </StackPanel>
                 </HierarchicalDataTemplate>
             </TreeView.Resources>
