@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rxgmBsmhnAb0aAGW9Z1Wn/URjR6yuK+hH35litq5v99CNOI6alv8RCEEI9H5f7XbpWrPjZbd/34e6NP+NxHkQQ==",
+  "dgSpecHash": "+OsDsSCMnu5WSewB8SnUnfANNpe/gt0YpDafbcZV8Xx4fqpaN2VfGdbrzWA8bdsCv60op0DvWUdRXv5cZv5h5Q==",
   "success": true,
-  "projectFilePath": "E:\\Progetti\\FolderSizeScanner\\FolderTreeSize.csproj",
+  "projectFilePath": "C:\\Projects\\FolderSizeScanner\\FolderTreeSize.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

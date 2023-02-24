@@ -1,20 +1,20 @@
 ﻿FolderTreeSize
-1.0.0.0
+
 
 winexe
 C#
 .cs
-C:\Projects\FolderSizeScanner\obj\Release\netcoreapp3.1\
+C:\Projects\FolderSizeScanner\obj\Release\net6.0-windows\
 FolderTreeSize
 none
 false
-TRACE;RELEASE;NETCOREAPP;NETCOREAPP3_1;
+TRACE;RELEASE;NET;NET6_0;NETCOREAPP
 C:\Projects\FolderSizeScanner\App.xaml
 2-1838577314
 
-111044745259
-192-1414551799
+92068132049
+194101785492
 ChooseDisk.xaml;MainWindow.xaml;
 
-True
+False
 

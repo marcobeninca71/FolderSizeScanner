@@ -53,7 +53,7 @@ namespace FolderTreeSize {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/FolderTreeSize;V1.0.0.0;component/choosedisk.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/FolderTreeSize;component/choosedisk.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\ChooseDisk.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
